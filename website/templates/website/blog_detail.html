@@ -1,0 +1,27 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section>
+    <div class="container">
+       
+        <div class="row text-center">
+            <div class="col-xl-10 mx-auto"><img class="img-fluid mb-5" style="height: 400px;"
+                    src="{{ blog.image.url }}"
+                    alt=""></div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 mx-auto">
+                <div class="text-content" style="font-size: 20px;">
+                    {{blog.content|safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}
