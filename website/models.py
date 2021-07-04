@@ -1,15 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User
-from froala_editor.fields import FroalaField
 from django.utils import timezone
 from .utils import generate_slug
+
 # Create your models here.
 
 
 class Blog(models.Model):
     author = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
     title = models.CharField(max_length=1000)
-    content = FroalaField(null=True)
+    content = models.TextField()
     slug = models.SlugField(max_length=1000,null=True,blank=True)
     image = models.ImageField(upload_to='image/')
     created_at = models.DateTimeField(auto_now_add=True)

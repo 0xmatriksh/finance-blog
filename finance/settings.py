@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rfv%v5*8fjb5zz+3b+1t$u%=4leail6+xpysqv((7e%ghcma%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'froala_editor',
+    'django_summernote',
+    
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,6 +126,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
