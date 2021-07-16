@@ -20,7 +20,7 @@ body{
 } */
 
 .menu {
-   font-size: 28px;
+   font-size: 22px;
 }
 
 .nabil {
@@ -28,8 +28,6 @@ body{
     display: flex;
     align-items: center;
 }
-
-
 
 .brand{
     display: flex;
@@ -40,7 +38,7 @@ body{
 
 #logo{
     /* margin-left: 200px; */
-    height: 40px;
+    height: 20px;
 }
 
 #blog-image{

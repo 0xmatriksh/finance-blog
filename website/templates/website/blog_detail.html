@@ -1,15 +1,22 @@
 {% extends "website/base.html" %}
 {% load static %}
 
+{% block head %}
+<meta name="description" content="{{blog.title}}">
+<meta name=" keywords" content="{{blog.keywords}}">
+<meta name="author" content="{{blog.author_name}}">
+{% endblock %}
+
 {% block content %}
 
 
+
+<div style="margin-top: 100px;"></div>
 <section>
     <div class="container">
-       
+
         <div class="row text-center">
-            <div class="col-xl-10 mx-auto"><img class="img-fluid mb-5" style="height: 400px;"
-                    src="{{ blog.image.url }}"
+            <div class="col-xl-10 mx-auto"><img class="img-fluid mb-5" style="height: 400px;" src="{{ blog.image.url }}"
                     alt=""></div>
         </div>
         <div class="row">

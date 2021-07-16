@@ -38,10 +38,27 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'froala_editor',
-    'django_summernote',
+    'tinymce',
+    
     
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'textcolor save link image preview codesample contextmenu table code fullscreen lists insertdatetime nonbreaking contextmenu directionality searchreplace wordcount visualblocks visualchars code autolink charmap anchor print hr pagebreak emoticons',
+    'toolbar1': 'formatselect | bold italic underline |  fontselect, fontsizeselect | forecolor backcolor '
+                '| alignleft aligncenter alignright alignjustify '
+               '| bullist numlist | outdent indent | table | link image | codesample | fullscreen preview code | charmap hr anchor emoticons',
+    
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'inline': False,
+    'statusbar': True,
+    'width': 'auto',
+    'height': 360,
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,3 +157,4 @@ MEDIA_URL = '/blog/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

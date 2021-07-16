@@ -3,63 +3,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financeprenaur Nepal</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/icon type">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link rel="stylesheet" href="fonts/MYRIADPRO-REGULAR.OTF"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  {% endblock %}
+  <title>Financepreneur Nepal</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/icon type">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link rel="stylesheet" href="fonts/MYRIADPRO-REGULAR.OTF"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <div>
-    <nav style="height: 70px;" class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white nabil">
-        <div class="container-fluid nabil">
-          <div class="d-flex align-items-center" style="font-size: 24px;"><a class="navbar-brand py-1 h1" href="/">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-static-top shadow navbar-light bg-light nabil">
+      <div class="container-fluid nabil">
+        <div class="d-flex align-items-center" style="font-size: 24px;"><a class="navbar-brand py-1 h1" href="/">
             <div class="brand">
-                <img id="logo" src="{% static 'images/logo.jpg' %}"> 
-                <h2>Financeprenaur Nepal</h2>
+              <img id="logo" style="height: 40px;" src="{% static 'images/logo.jpg' %}">
+              <div class="brand">Financepreneur Nepal</div>
             </div>
-          </div>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-          <!-- Navbar Collapse -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            
-            <ul class="navbar-nav ml-auto menu ">
-              
-
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn font-weight-bold " href="#"><h3>HOME</h3></a>
-              </li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn font-weight-bold" href="#"><h3>ABOUT</h3></a>
-              </li>
-
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn font-weight-bold" href="#"><h3>BLOG</h3></a>
-              </li>
-
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn font-weight-bold" href="#"><h3>CONTACT</h3></a>
-              </li>
-
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn font-weight-bold" href="#"><h3>SUPPORT US</h3></a>
-              </li>
-
-            </ul>
-          </div>
         </div>
-      </nav>
+        <a href="#" class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i
+            class="fa fa-bars"></i></a>
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <ul class=" navbar-nav ml-auto menu ">
+
+
+            <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
+              <a class="btn font-weight-bold " href="#">
+                <h4>HOME</h4>
+              </a>
+            </li>
+            <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
+              <a class="btn font-weight-bold" href="#">
+                <h4>ABOUT</h4>
+              </a>
+            </li>
+
+            <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
+              <a class="btn font-weight-bold" href="{% url 'nepse' %}">
+                <h4>TODAY</h4>
+              </a>
+            </li>
+
+            <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
+              <a class="btn font-weight-bold" href="#">
+                <h4>CONTACT</h4>
+              </a>
+            </li>
+
+            <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
+              <a class="btn font-weight-bold" href="#">
+                <h4>SUPPORT US</h4>
+              </a>
+            </li>
+
+          </ul>
+          <form class="navbar-form " method="POST" style="display: flex; width:300px; justify-content:space-around;"
+            action="/">
+            {% csrf_token %}
+            <div class="form-group">
+              <input name="name_blog" list="bloglist" type="text" placeholder="Blog title.." class="form-control"
+                style="width: 200px;">
+            </div>
+            <button type="submit" class="btn btn-primary" style="height: 40px;">Submit</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <script>
+      if ($(window).width() <= 767) {
+        $('.brand').addClass("h4")
+      }
+      else {
+        $('.brand').addClass("h2")
+      }
+    </script>
 
     <!-- <div class="top-half">
        
@@ -76,9 +108,10 @@
             </div>
         </div>
     </div> -->
-        {% block content %}
-        {% endblock %}
-    </div>
-    
+    {% block content %}
+    {% endblock %}
+  </div>
+
 </body>
+
 </html>

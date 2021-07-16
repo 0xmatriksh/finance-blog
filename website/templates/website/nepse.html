@@ -1,0 +1,67 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    table,
+    td,
+    th {
+        border: 1px solid black;
+        font-size: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .green {
+        color: green;
+    }
+</style>
+<div style="margin-top: 100px;"></div>
+<div class="container">
+    <h1>NEPSE TODAY</h1>
+    <table>
+        <tr>
+            <td>Market Index : </td>
+            <td>{{data.currentValue}}</td>
+        </tr>
+        <tr>
+            <td>Previous Close : </td>
+            <td>{{data.previousClose}}</td>
+        </tr>
+        <tr>
+            <td>Change in points : </td>
+            <td id="change">{{data.change}}</td>
+            <script>
+                change = document.getElementById('change').innerHTML
+                if (change >= 0) {
+                    document.getElementById('change').className = 'green'
+                }
+                else {
+                    document.getElementById('change').className = 'red'
+                }
+            </script>
+        </tr>
+        <tr>
+            <td>Day High : </td>
+            <td>{{data.high}}</td>
+        </tr>
+        <tr>
+            <td>Day Low : </td>
+            <td>{{data.low}}</td>
+        </tr>
+    </table>
+</div>
+
+
+{% endblock %}
