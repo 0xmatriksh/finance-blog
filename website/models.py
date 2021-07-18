@@ -32,3 +32,6 @@ class Blog(models.Model):
             name = self.author
         return name
 
+    def description(self):
+        return (self.content)[0:100]
+

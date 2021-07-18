@@ -2,9 +2,20 @@
 {% load static %}
 
 {% block head %}
-<meta name="description" content="{{blog.title}}">
+<meta name="description" content="{{blog.description}}">
 <meta name=" keywords" content="{{blog.keywords}}">
 <meta name="author" content="{{blog.author_name}}">
+
+<meta itemprop="name" content="{{blog.title}}" />
+
+<!-- Facebook Open Graph Tags -->
+<meta property="og:title" content="{{blog.title}}" />
+<meta property="og:description" content="{{blog.description}}" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="{{blog.title}}" />
+<meta name="twitter:description" content="{{blog.title}}" />
+
 {% endblock %}
 
 {% block content %}
